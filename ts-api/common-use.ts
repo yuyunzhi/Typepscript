@@ -55,7 +55,7 @@ interface IReact {
 }
 
 const reactData: IReact = {
-    style: 'class',
+    style: {color:'red'},
     children : null,
     render:(item:number):void=>{},
     map:{
