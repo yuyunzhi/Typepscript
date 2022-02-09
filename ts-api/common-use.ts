@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, HTMLAttributes, ReactChild, CSSProperties, ReactElement} from 'react'
+import { ButtonHTMLAttributes, HTMLAttributes, ReactChild, CSSProperties, ReactElement } from 'react'
 
 
 // 1、对一个元素属性进行透传可以使用HTMLAttributes<HTMLElement>
@@ -29,8 +29,8 @@ type NativeButton = ButtonHTMLAttributes<HTMLElement>;
 
 // 递归,key value ,可以使用 interface
 interface SourceDataItem {
-    text: string;
-    children?: SourceDataItem[];
+  text: string;
+  children?: SourceDataItem[];
 }
 
 
@@ -44,22 +44,43 @@ type DataSourceType<T = {}> = T & SourceDataItem;
 type MenuMode = "horizontal" | "vertical";
 
 
+// 5、可选链
+
+let user = {
+  info: {
+    getAge() {
+      return 1
+    }
+  }
+}
+
+let age = user?.info?.getAge?.()
+
+// 6、空值合并运算
+// 当左侧的操作数为 null 或者 undefined 时，返回其右侧操作数，否则返回左侧操作数。
+
+const users:any = {
+  level: 0
+}
+
+let level1 = users.level ?? '无' // 0
+let level2 = users.other_level ?? '无' // 无
 
 // other 一些react 特别的属性写法
 interface IReact {
-    style: CSSProperties
-    children: ReactChild
-    render: Renderer
-    map: { [key: string]: string[] };
-    buttons?: Array<ReactElement>;
+  style: CSSProperties
+  children: ReactChild
+  render: Renderer
+  map: { [key: string]: string[] };
+  buttons?: Array<ReactElement>;
 }
 
 const reactData: IReact = {
-    style: {color:'red'},
-    children : null,
-    render:(item:number):void=>{},
-    map:{
-        's':['1','2'],
-        'name':['1','2,3']
-    }
+  style: { color: 'red' },
+  children: null,
+  render: (item: number): void => { },
+  map: {
+    's': ['1', '2'],
+    'name': ['1', '2,3']
+  }
 }

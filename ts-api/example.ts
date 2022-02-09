@@ -14,3 +14,10 @@ console.log('strLength2', strLength2);
 // void
 
 const foo = {} as Function;
+
+let user:any = {
+    info:0
+}
+
+let getInfo = user?.info?.a?.b
+console.log('getInfo', getInfo);
