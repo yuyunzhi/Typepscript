@@ -1,8 +1,11 @@
 
 let React = require('react')
 
-let abcde = require('abcde')
+import x from 'abcde'
+import { b } from 'antd-dayjs-webpack-plugin'
+import z from 'z'
 
+import img from './img.png'
 
 // get
 getList('1')

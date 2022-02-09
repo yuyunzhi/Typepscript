@@ -62,4 +62,21 @@ declare module "abcde" {
 }
 
 
+declare module 'antd-dayjs-webpack-plugin'{
+    export let b : string
+}
+
+
+declare module '*.png'{
+    const URL:string
+    export default URL
+}
+
+
+declare module '*.css'{
+    const classes : {
+        readonly [key:string]:string
+    }
+    export default classes
+}
 
