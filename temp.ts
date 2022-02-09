@@ -1,4 +1,8 @@
-import { getNodeMajorVersion } from "typescript"
+
+let React = require('react')
+
+let abcde = require('abcde')
+
 
 // get
 getList('1')
@@ -27,3 +31,11 @@ NodeJS.ProcessEnv.NODE_ENV
 // 变量是函数也是对象
 $2('s')
 $2.A
+
+
+// 变量是函数，也是类（可以new出来）
+
+const a = new Animal(1)
+a.staticA
+Animal()
+

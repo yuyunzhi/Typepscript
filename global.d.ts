@@ -1,21 +1,19 @@
-declare var aNumber : number
-declare const aMax : number
+declare var aNumber: number
+declare const aMax: number
 
-type voidFn = ()=>void
+type voidFn = () => void
 
-declare function getList<T>(params:T):void
-declare function getData(params:number):void
+declare function getList<T>(params: T): void
+declare function getData(params: number): void
 
-
-declare function render(callback?: voidFn):string
-
+declare function render(callback?: voidFn): string
 
 declare class Person {
-    static maxAge:number
-    static getMaxAge:()=>number
-    constructor(name:string,age:number)
+    static maxAge: number
+    static getMaxAge: () => number
+    constructor(name: string, age: number)
 
-    getName(id:number):string
+    getName(id: number): string
 }
 
 
@@ -35,14 +33,33 @@ declare namespace NodeJS {
     function getList<T>(params: T): void
     function getData(params: number): void
     function render(callback?: voidFn): string
-    const NODE_ENV : 'development' | 'production' | 'test';
+    const NODE_ENV: 'development' | 'production' | 'test';
     namespace ProcessEnv {
-         var NODE_ENV: 'development' | 'production' | 'test';
-         var PUBLIC_URL: string;
+        var NODE_ENV: 'development' | 'production' | 'test';
+        var PUBLIC_URL: string;
     }
 }
 
-declare function $2(s:string):void
+declare function $2(s: string): void
 declare namespace $2 {
-    const A:number
+    const A: number
 }
+
+declare function Animal():void
+
+declare class Animal {
+    staticA():void
+    static maxAge : number
+    constructor(n:number)
+}
+
+declare module "abcde" {
+    export let a: number
+    export function b(): number
+    export namespace c {
+        let cd: string
+    }
+}
+
+
+
