@@ -59,12 +59,34 @@ let age = user?.info?.getAge?.()
 // 6、空值合并运算
 // 当左侧的操作数为 null 或者 undefined 时，返回其右侧操作数，否则返回左侧操作数。
 
-const users:any = {
+const users: any = {
   level: 0
 }
 
 let level1 = users.level ?? '无' // 0
 let level2 = users.other_level ?? '无' // 无
+
+// 7、类型守卫 typeof instanceof in
+
+// 1） if(typeof xxx === 'string'){}
+interface Hero {
+  name: string;
+  skill: string;
+}
+
+const zed: Hero = { name: "影流之主", skill: "影子" };
+type LOL = typeof zed; // type LOL = Hero
+
+// 2) if(xxx instanceof Man){}
+// 3) if('a' in Man){}
+
+// 8、双重断言
+
+function handler (event:Event){
+  const element = event as any as HTMLElement
+}
+
+
 
 // other 一些react 特别的属性写法
 interface IReact {
