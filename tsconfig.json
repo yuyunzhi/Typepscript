@@ -1,15 +1,39 @@
 {
   "compilerOptions": {
-    "target": "es2016", 
-    "esModuleInterop": true, 
+   
+    "target": "ES5",
+    "lib":["dom","esnext"],
+    "esModuleInterop": true,
+    "module": "CommonJS",
     "forceConsistentCasingInFileNames": true,
-    "strict": true, 
+    "strict": true,
+    // 允许编译器编译JS，JSX文件
+    "allowJs": true,
+    // 编译的源文件中存在错误的时候不再输出编译结果文件
+    "noEmitOnError": true, 
+    "noImplicitAny": false, // 当源文件中存在隐式any的时候报错
     "skipLibCheck": true,
-    "removeComments":true,
+    // 删除注释
+    "removeComments": true,
     "sourceMap": false,
+    // 指定编译的目录输出
+    "outDir":"./complier",
+    // 指定根目录
+    "rootDir": "./",
+    // jsx 编译
+    "jsx": "react",
+    // 开启后自动生成声明文件
+    "declaration": true,
+    // 指定生成声明文件存放目录
+    "declarationDir": "./declare"
   },
+  "files": [
+    "./ts-api/example.ts"
+  ],
   "include": [
-    "ts-api/**/example.ts"
+    "ts-api/common-use.ts",
+    "temp",
+    "react"
   ],
   "exclude": [
     "node_modules"

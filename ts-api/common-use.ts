@@ -91,7 +91,7 @@ function handler (event:Event){
 // other 一些react 特别的属性写法
 interface IReact {
   style: CSSProperties
-  children: ReactChild
+  children: ReactChild | any
   render: Renderer
   map: { [key: string]: string[] };
   buttons?: Array<ReactElement>;

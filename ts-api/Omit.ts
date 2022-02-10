@@ -13,6 +13,3 @@ interface InputProps {
 
 // Omit是剔除，保留剩余的 等价于 Pick选出所要保留的
 let x : Omit<InputProps, "disabled">
-
-
-

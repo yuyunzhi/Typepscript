@@ -72,3 +72,20 @@ interface Hero {
 
 const zed: Hero = { name: "影流之主", skill: "影子" };
 type LOL = typeof zed; // type LOL = Hero
+
+function sleep(args:number){
+    return new Promise(resolve=>{
+        setTimeout(()=>{
+            resolve(args)
+        },1000)
+    })
+}
+
+sleep(6).then(res=>{
+    console.log(res);  
+})
+
+
+document.getElementById("#app");
+
+

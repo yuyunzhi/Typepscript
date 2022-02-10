@@ -3,7 +3,7 @@ let React = require('react')
 
 import x from 'abcde'
 import { b } from 'antd-dayjs-webpack-plugin'
-import z from 'z'
+// import z from 'z'
 
 import img from './img.png'
 

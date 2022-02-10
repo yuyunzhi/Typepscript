@@ -40,8 +40,9 @@ let uncertain4: unknown = notSure4; // OK
 
 // unknow 不可以赋值给 number
 let notSure3: unknown = 4;
-let uncertain3: number = notSure3; // Error
+// let uncertain3: number = notSure3; // Error
 
 // unknow 不可以赋值给 string
 let notSure5: unknown = 4;
-let uncertain5: string = notSure5; // Error
+// let uncertain5: string = notSure5; // Error
+
